@@ -1,0 +1,21 @@
+
+.btnt:hover{
+    background-color: green;
+    
+}
+.tall-btn{
+    padding: 2px;
+    
+    
+    width: 100%;
+    
+
+
+}
+.tall-btn:hover{
+    background-color: green;
+}
+.btnt{
+  width:100%;   
+}
+
