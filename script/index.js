@@ -58,7 +58,7 @@ const diplayLoadPlant = (plants) => {
             <p class="font-semibold">${plant.category}</p>
             <p class="font-semibold  ">${plant.price}</p>
             </div>
-            <button id="addToCart" onclick="addToCart(${plant.id})" class="bg-green-900 p-3 rounded-2xl sm:w-3/4   md:w-full  mt-2 text-white hover:bg-sky-300">Add to Cart</button>
+            <button  class="bg-green-900 p-3 rounded-2xl sm:w-3/4   md:w-full  mt-2 text-white hover:bg-sky-300">Add to Cart</button>
           </div>
        
       `;
