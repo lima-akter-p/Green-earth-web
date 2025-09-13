@@ -1,169 +1,209 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-006
 
-### 📅 Deadline For 60 marks: 9th September, 2025 (11:59 pm ⏱️)
-
-### 📅 Deadline For 50 marks : 13th September , 2025 (6:00 pm⏱️)
-
-### 📅 Deadline For 30 marks: Any time after 13the September , 2025 (6:01 pm⏱️).
-
----
-# Green Earth
-
-
-## Private Repository: https://classroom.github.com/a/nVZrg5R9 
-
-## Alternative Private Repository: https://classroom.github.com/a/KCGI14ST 
-
-## Alternative Private Repository: https://classroom.github.com/a/JMuIYqgK 
-
-
----
-🌴 API Endpoints
----
-1. Get 🌴All Plants
-```bash
-https://openapi.programming-hero.com/api/plants
-```
-
-2. Get 🌴All categories <br/>
-```bash
-https://openapi.programming-hero.com/api/categories
-```
-
-
-3. Get 🌴plants by categories <br/>
-```bash
-https://openapi.programming-hero.com/api/category/${id}
-```
-
-```bash
-https://openapi.programming-hero.com/api/category/1
-```
-
-4. Get 🌴Plants Detail <br/>
-
-```bash
-https://openapi.programming-hero.com/api/plant/${id}
-```
-
-```bash
-https://openapi.programming-hero.com/api/plant/1
-```
----
-
-
-
-
-## ✅ Main Requirements 
-
-#### 1) Navbar
-
-- Website **logo/name** on the **left**  
-- **Menu items** in the **center** 
-- **Plant a Tree button** on the **right** 
-
-#### 2) Banner 
-- A **background image**  
-- A **title** and **subtitle**  
-- A **centered button**  
-
-#### 3) About Campaign
-- **Section heading**  
-- **Image on the left**, **text on the right**  
-
-#### 4) Our Impact Section 
-- Show **3 cards** with campaign **statistics**  
-
-#### 5) Plant a Tree Today Section & Footer
-- **Form**: Name, Email, Number of Trees  
-- **Footer** with copyright info 
-
-#### 6) Responsiveness 
-- Website must be **mobile responsive**  
 
 ---
 #### 7) Create a README file to answer the following question-
 
+### 1) What is the difference between var, let, and const?
 
-#### 1) What is the difference between var, let, and const?
+ Ans: | Feature        | `var`                             | `let`                    | `const`                                              |
+| -------------- | --------------------------------- | ------------------------ | ---------------------------------------------------- |
+| Scope          | Function/global                   | Block                    | Block                                                |
+| Hoisting       | Yes (initialized with undefined)  | Yes (temporal dead zone) | Yes (temporal dead zone)                             |
+| Re-declaration | Yes                               | No                       | No                                                   |
+| Re-assignment  | Yes                               | Yes                      | No                                                   |
+| Useful for     | Legacy code or function-wide vars | Variables that change    | Constants or objects/arrays that shouldn’t re-assign |
 
-#### 2) What is the difference between map(), forEach(), and filter()? 
+     
 
-#### 3) What are arrow functions in ES6?
+ ### 2) What is the difference between map(), forEach(), and filter()? 
+  Ans: 
+      | Method    | Returns   | Purpose                      | Original Array Changed? |
+| --------- | --------- | ---------------------------- | ----------------------- |
+| `forEach` | undefined | Perform action for each item | ❌ No                    |
+| `map`     | new array | Transform each element       | ❌ No                    |
+| `filter`  | new array | Keep elements that pass test | ❌ No                    |
+
+
+
+
+ ### 3) What are arrow functions in ES6?
+ Ans: 
+     In ES6 (ECMAScript 2015), arrow functions are a concise way to write functions in JavaScript. They provide a shorter syntax than traditional functions and have a few special behaviors, especially regarding this.
+
+1. Syntax
+
+Arrow functions use the => (arrow) notation:
+
+// Traditional function
+function add(a, b) {
+  return a + b;
+}
+
+// Arrow function
+const add = (a, b) => {
+  return a + b;
+};
+
+// If the function has a single expression,  omit braces and return
+const add = (a, b) => a + b;
+
+
+Single parameter: parentheses are optional
+
+const square = x => x * x;
+
+
+No parameters: use empty parentheses
+
+const greet = () => console.log("Hello!");
+
+
+Returning an object: wrap in parentheses
+
+const createUser = (name, age) => ({ name, age });
 
 #### 4) How does destructuring assignment work in ES6?
+ Ans:
+     1. Array Destructuring
 
-#### 5) Explain template literals in ES6. How are they different from string concatenation?
+You can unpack values from arrays into variables:
 
-## ⚙️ Functionalities 
+const numbers = [10, 20, 30];
 
-1) Category Loading 
-Load Tree Categories dynamically on the left side.
+// Basic destructuring
+const [a, b, c] = numbers;
+console.log(a, b, c); // 10 20 30
 
-2) Category Click → Tree Data 
-On clicking a category: load trees of that category.
+// Skipping elements
+const [x, , z] = numbers;
+console.log(x, z); // 10 30
 
-Display in a 3-column card layout.
+// Default values
+const [p, q, r, s = 40] = numbers;
+console.log(p, q, r, s); // 10 20 30 40
 
-3) Card Contents 
- Each card includes:
+2. Object Destructuring
 
-        - Image
+You can extract properties from objects:
 
-        -  Name
+const person = { name: "Alice", age: 25, city: "Dhaka" };
 
-        - Short description
+// Basic destructuring
+const { name, age } = person;
+console.log(name, age); // Alice 25
 
-        - Category
+// Assigning to new variable names
+const { name: n, age: a } = person;
+console.log(n, a); // Alice 25
 
-        - Price
+// Default values
+const { name: userName, country = "Bangladesh" } = person;
+console.log(userName, country); // Alice Bangladesh
 
-        - Add to Cart button
+3. Nested Destructuring
 
-4) Modal on Card Click 
-Clicking a tree name on a card opens a modal with full tree details.
+You can destructure nested arrays or objects:
 
+const data = {
+  id: 1,
+  info: { email: "alice@example.com", phone: "12345678" }
+};
 
-##  🧪 Challenges 
+const { info: { email, phone } } = data;
+console.log(email, phone); // alice@example.com 12345678
 
+const arr = [1, [2, 3], 4];
+const [one, [two, three], four] = arr;
+console.log(one, two, three, four); // 1 2 3 4
 
-    1) Add to Cart 
-    Clicking Add to Cart: - Adds the tree to Cart List
-                          - Shows tree name 
+4. Function Parameters Destructuring
 
-    2) Total Calculation 
-    Calculate total price of trees in cart.
+You can destructure arguments directly in function parameters:
 
-    3) Remove from Cart 
-    Clicking ❌ removes tree and deducts price from total.
+function greet({ name, age }) {
+  console.log(`Hello ${name}, age ${age}`);
+}
 
-    4) Loading Spinner
-    Show spinner while data is loading.
+const person = { name: "Bob", age: 30 };
+greet(person); // Hello Bob, age 30
 
-    5) Active Button State 
-    Highlight active category button when selected.
-
-
-
-🧰 Technology Stack:
-        
-        HTML
-
-        CSS (Vanilla / Tailwind / DaisyUI)
-
-        JavaScript (Vanilla only, no frameworks)
-
-📌 Rules
-✅ At least 5 meaningful commits
-
-❌ No dummy text or Lorem Ipsum — must use relevant content
-
-
-
+// Array parameter destructuring
+function sum([x, y]) {
+  return x + y;
+}
+console.log(sum([5, 10])); // 15
 
 
-## 🔗 Submission
-- **Live Link :** YOUR_DEPLOYED_URL_HERE  
-- **GitHub Private Repository:** YOUR_REPO_URL_HERE  
 
----
+### 5) Explain template literals in ES6. How are they different from string concatenation?
+
+ Ans:
+    1. Syntax
+
+Template literals are enclosed by backticks (`) instead of quotes:
+
+const name = "Alice";
+const age = 25;
+
+// Using template literals
+const greeting = `Hello, my name is ${name} and I am ${age} years old.`;
+console.log(greeting);
+// Output: Hello, my name is Alice and I am 25 years old.
+
+
+${expression} allows embedding any JavaScript expression directly inside the string.
+
+2. Multi-line Strings
+
+With template literals, you can create multi-line strings without using \n:
+
+const message = `This is a
+multi-line
+string.`;
+
+console.log(message);
+/* Output:
+This is a
+multi-line
+string.
+*/
+
+3. Expressions and Functions
+
+You can use arithmetic, function calls, or any expressions inside ${}:
+
+const a = 5;
+const b = 10;
+console.log(`The sum of ${a} and ${b} is ${a + b}`); 
+// Output: The sum of 5 and 10 is 15
+
+function greet(name) {
+  return `Hi ${name}!`;
+}
+console.log(`Message: ${greet("Bob")}`); 
+// Output: Message: Hi Bob!
+
+4. Difference from String Concatenation
+Feature	String Concatenation	Template Literals
+Syntax	"Hello " + name + "!"	`Hello ${name}!`
+Multi-line strings	Use \n or +	Directly supported with backticks
+Expressions in strings	Need + to join values	${expression} allows direct embedding
+Readability	Less readable for complex strings	Cleaner and easier to read
+
+Example:
+
+// Concatenation
+const name = "Alice";
+const age = 25;
+const greeting1 = "Hello, my name is " + name + " and I am " + age + " years old.";
+console.log(greeting1);
+
+// Template literal
+const greeting2 = `Hello, my name is ${name} and I am ${age} years old.`;
+console.log(greeting2);
+
+
+Output for both is the same, but template literals are much cleaner, especially for multi-line or dynamic strings.
+
+
+

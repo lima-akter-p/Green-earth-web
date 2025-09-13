@@ -2,20 +2,31 @@
 .btnt:hover{
     background-color: green;
     
-}
-.tall-btn{
-    padding: 2px;
     
     
-    width: 100%;
     
-
-
-}
-.tall-btn:hover{
-    background-color: green;
+    
+    
 }
 .btnt{
-  width:100%;   
+    width: 50%;
+    padding: 5px;
 }
+
+.btnl:hover{
+    background-color: green;
+}
+
+.btnl{
+    width: 50%;
+    padding: 5px;
+}
+
+
+   
+    
+
+
+
+
 

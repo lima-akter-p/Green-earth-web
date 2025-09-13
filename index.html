@@ -13,6 +13,7 @@
   
   </head>
  <body>
+  
       <header class=" mx-auto px-4 w-full">
        <div class="navbar bg-green-600 shadow-sm ">
         <div class="navbar-start">
@@ -56,35 +57,49 @@
 
          <section class="bg-sky-100 pt-20 ">
           
-         <div class="flex gap-10    ">
+         <div class=" flex-col sm:flex-row md:flex  gap-5">
   
-          <div class="ml-20">
+            <div class="ml">
              
+             <h2 class="text-xl font-bold">Category</h2>
+             <ul id="category-level" > 
             
-           <ul id="category-level"> 
             
-            
-           <li></li>
+             <li></li>
 
-          </ul>
+            </ul>
    
     
-          </div>
-           <div id="plant-container" class=" grid grid-cols-3 gap-x-5 gap-y-5 mx-auto " >
+            </div>
+
+            
+            <!-- <div id="plant-container" class=" grid grid-cols-3 gap-x-5 gap-y-5 mx-auto " >
              
             
            
-           </div>
-           <div class=" w-500px grid grid-cols-3  gap-x-5 gap-y-5 mx-auto" id="allPlantContainer" >
+            </div> -->
+            <h2 class="mb-40 text-xl font-bold">Choose Your Trees -></h2>
+            
+            <div class="md: w-full   md:grid grid-cols-3 sm:grid grid-cols-1 gap-x-70 md:gap-y-10 sm:y-100 mr-65" id="allPlantContainer" >
+              
+              
 
 
-             </div>
+            </div>
+           
+           
             
 
           
-          <div>
-          <p class="font-semibold mr-20">Your cart</p>
-          </div>
+            <div id="tree-list" class="w-100 h-100  bg-white mr-20">
+             <p class="  text-xl font-bold mr-10">Your cart</p>
+             <ul id="cart-list" class="space-y-3">
+
+             </ul>
+             <div class="mt-4 border-t pt-2"></div>
+             <p class="text-lg font-semibold">Total:৳ <span id="total" class=" space-x-2">0</span> </p>
+
+            </div>
           </div>
 
          </section >
@@ -144,13 +159,32 @@
           <option value="10 Tree - $50"></option>
   
          </datalist>
-         <button class="bg-yellow-300 rounded-xl p-1" >Donate Now</button>
+         <button class=  "  bg-yellow-300 rounded-xl p-1" >Donate Now</button>
  
          </form>
     
          </div>
          </div>
-         </section>
+        </section>
+        <!-- Open the modal using ID.showModal() method -->
+      <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+       
+      <dialog id="plant_modal" class="modal modal-bottom sm:modal-middle">
+       <div class="modal-box">
+        <div id="details-container">
+          
+
+        </div>
+        <div class="modal-action">
+        <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+       </form>
+       </div>
+      </div>
+      </dialog>
+
+   
 
          
 
@@ -164,7 +198,7 @@
 
 
        <footer class=" bg-green-950">
-  <p  class="text-center text-white p-5">© 2025 Green Earth. All Rights Reserved.</p>
+       <p  class="text-center text-white p-5">© 2025 Green Earth. All Rights Reserved.</p>
 
        </footer>
        <script src="./script/index.js"></script>
